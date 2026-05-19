@@ -10,7 +10,7 @@ After each completed task, run `make build` in the project root to verify the ou
 ## High-level architecture
 - `cmd/main.go` wires config, repositories, services, and handlers, then registers routes with `gorilla/mux` plus CORS/JSON middleware and the `/health` route.
 - `config` loads `.env` via `godotenv`; `DB_URL` is required and `PORT` defaults to `8080`.
-- Each domain (todos, flashcards) follows `models` → `db` (Postgres repo) → `services` (validation/business rules) → `handlers` (HTTP JSON).
+- Each domain (todos, notes) follows `models` → `db` (Postgres repo) → `services` (validation/business rules) → `handlers` (HTTP JSON).
 - Postgres schema/migrations live in `supabase/migrations` and use the `gocourse` schema.
 
 ## Key conventions
