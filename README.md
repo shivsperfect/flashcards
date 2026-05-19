@@ -61,6 +61,20 @@ The template includes a complete REST API with the following endpoints:
 ### Health Check
 - `GET /health` - Application health status
 
+### Todo Endpoints
+- `POST /todos` - Create a todo
+- `GET /todos` - Get all todos
+- `GET /todos/{id}` - Get todo by ID
+- `PUT /todos/{id}` - Update todo by ID
+- `DELETE /todos/{id}` - Delete todo by ID
+
+### Flashcard Endpoints
+- `POST /flashcards` - Create a flashcard
+- `GET /flashcards` - Get all flashcards
+- `GET /flashcards/{id}` - Get flashcard by ID
+- `PUT /flashcards/{id}` - Update flashcard by ID
+- `DELETE /flashcards/{id}` - Delete flashcard by ID
+
 ### Exported calls for REST client
 You can find an exported HAR archive which you can import into a REST client for easily interacting with the API in `./artifacts`
 
@@ -85,4 +99,4 @@ Database schema is managed through SQL migrations located in: `supabase/migratio
 
 ## Creating Your Own Project
 
-When you're ready to build your own application using this template, you can delete the existing todo API implementation and replace it with your own business logic. The template provides the foundation with database connectivity, configuration management, and API structure.
+When you're ready to build your own application using this template, you can delete the existing todo and flashcard API implementations and replace them with your own business logic. The template provides the foundation with database connectivity, configuration management, and API structure.
